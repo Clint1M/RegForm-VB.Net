@@ -99,7 +99,7 @@ Public Class frmReg
                 Dim temP As String
                 temP = txtName.Text & "," & txtAge.Text & "," & txtAddress.Text & "," & txtPassword.Text
                 Dim mystreaM As StreamReader
-                mystreaM = New StreamReader("C:\C\SV\RegistrationForm\Database\dtBase.csv")
+                mystreaM = New StreamReader("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\dtBase.csv")
 
                 Do While Not mystreaM.EndOfStream
                     mystreaM.ReadLine()
@@ -121,7 +121,7 @@ Public Class frmReg
             End Try
 
             Dim sW As StreamWriter
-            sW = New StreamWriter("C:\C\SV\RegistrationForm\Database\dtBase.csv", True)
+            sW = New StreamWriter("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\dtBase.csv", True)
             sW.Write(vbNewLine)
             sW.Write(txtName.Text & "," & txtAge.Text & "," & txtAddress.Text & "," & txtPassword.Text)
             sW.Close()
@@ -146,12 +146,12 @@ Public Class frmReg
             End If
         End Sub
         Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-            If Not Directory.Exists("C:\C\SV\RegistrationForm\Database\") Then
+            If Not Directory.Exists("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\") Then
                 MsgBox("newone")
-                Directory.CreateDirectory("C:\C\SV\RegistrationForm\Database\")
+                Directory.CreateDirectory("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\")
 
                 Dim firStream As StreamWriter
-                firStream = New StreamWriter("C:\C\SV\RegistrationForm\Database\dtBase.csv", True)
+                firStream = New StreamWriter("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\dtBase.csv", True)
                 firStream.Write("Accounts")
                 Thread.Sleep(100)
                 firStream.Close()
