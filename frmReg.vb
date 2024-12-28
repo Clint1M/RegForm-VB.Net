@@ -175,5 +175,9 @@ Public Class frmReg
             Else
                 e.Handled = False
             End If
+
+            If Asc(e.KeyChar) = 8 Then
+                e.Handled = False
+            End If
         End Sub
     End Class
