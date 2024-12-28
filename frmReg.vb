@@ -156,9 +156,9 @@ Public Class frmReg
                 Thread.Sleep(100)
                 firStream.Close()
 
-                writeInfo()
+                Call writeInfo()
             Else
-                writeInfo()
+                Call writeInfo()
             End If
 
             Thread.Sleep(100)
