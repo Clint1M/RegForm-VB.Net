@@ -147,7 +147,6 @@ Public Class frmReg
         End Sub
         Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
             If Not Directory.Exists("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\") Then
-                MsgBox("newone")
                 Directory.CreateDirectory("C:\Users\HP\Documents\C\SV\RegistrationForm\Database\")
 
                 Dim firStream As StreamWriter
